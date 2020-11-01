@@ -1,0 +1,106 @@
+<div class="navbar-top" [ngClass]="fuseConfig.layout.navbar.secondaryBackground">
+
+    <div class="logo">
+        <img class="logo-icon" src="assets/images/logos/fuse.svg">
+        <span class="logo-text secondary-text">FUSE</span>
+    </div>
+
+    <div class="buttons">
+
+        <button mat-icon-button class="toggle-sidebar-folded"
+                (click)="toggleSidebarFolded()" fxHide.lt-lg>
+            <mat-icon class="secondary-text">menu</mat-icon>
+        </button>
+
+        <button mat-icon-button class="toggle-sidebar-opened"
+                (click)="toggleSidebarOpened()" fxHide.gt-md>
+            <mat-icon class="secondary-text">arrow_back</mat-icon>
+        </button>
+
+    </div>
+
+</div>
+
+
+<div class="navbar-scroll-container" [ngClass]="fuseConfig.layout.navbar.primaryBackground"
+     fusePerfectScrollbar [fusePerfectScrollbarOptions]="{suppressScrollX: true}">
+
+    <!-- <div class="user" fxLayout="column" [ngClass]="fuseConfig.layout.navbar.secondaryBackground">
+
+        <div class="h3 username">Charlie Adams</div>
+        <div class="h5 email hint-text mt-8">adams.charlie@mail.com</div>
+        <div class="avatar-container" [ngClass]="fuseConfig.layout.navbar.primaryBackground">
+            <img class="avatar" src="assets/images/avatars/Velazquez.jpg">
+        </div>
+
+    </div> -->
+
+    <div class="navbar-content">
+        <fuse-navigation class="material2" layout="vertical"></fuse-navigation>
+        <!-- <div class="filterh">
+        <a mat-list-item (click)="isFilter = !isFilter">
+            <mat-icon class="font-18">filter_alt</mat-icon>
+            <span class="padding-10">Filter </span>
+            <mat-icon class="white" *ngIf="isFilter">arrow_right
+            </mat-icon>
+            <mat-icon class="white" *ngIf="!isFilter ">arrow_drop_down
+            </mat-icon>
+           
+          </a>
+        </div>
+
+          <div class="mlr-n" id="isFilter" [collapse]="isFilter">
+            <mat-nav-list>
+              <br>
+
+              <div (click)="isvrfVlanFilter = !isvrfVlanFilter" class="collapseable-title">
+                <mat-icon class="white" *ngIf="isvrfVlanFilter">arrow_right</mat-icon>
+                <mat-icon class="white" *ngIf="!isvrfVlanFilter ">arrow_drop_down</mat-icon>
+                <span style="color: white; font-size: 16px;">Filter by Link Status</span>
+                <hr class="filter-title-border">
+              </div>
+
+              <div id="isvrfVlanFilter" [collapse]="isvrfVlanFilter">
+                <mat-radio-group aria-label="Select an option">
+                  <mat-radio-button class="service-sub-header" value="1">UP</mat-radio-button><br>
+                  <mat-radio-button class="service-sub-header" value="2">DOWN</mat-radio-button>
+                </mat-radio-group>
+              </div>
+
+              <div (click)="isRoutingFilter = !isRoutingFilter" class="collapseable-title">
+                <mat-icon class="white" *ngIf="isRoutingFilter">arrow_right</mat-icon>
+                <mat-icon class="white" *ngIf="!isRoutingFilter">arrow_drop_down</mat-icon>
+                <span style="color: white; font-size: 16px;">Device Family</span>
+                <hr class="filter-title-border">
+              </div>
+
+              <div id="isRoutingFilter" [collapse]="isRoutingFilter">
+                <mat-checkbox [(ngModel)]='routers' (change)="OnChange($event,'provider_id','awx',2)"
+                  class="service-sub-header">Routers</mat-checkbox>
+                <mat-checkbox class="ml-14" [(ngModel)]='switches' (change)="OnChange($event,'provider_id','awx',2)"
+                  class="service-sub-header">Meraki Switches</mat-checkbox>
+              </div>
+
+              <div (click)="istagFilter = !istagFilter" class="collapseable-title">
+                <mat-icon class="white" *ngIf="istagFilter">arrow_right</mat-icon>
+                <mat-icon class="white" *ngIf="!istagFilter">arrow_drop_down</mat-icon>
+                <span style="color: white; font-size: 16px;">Device Types</span>
+                <hr class="filter-title-border">
+              </div>
+
+              <div id="istagFilter" [collapse]="istagFilter">
+                <mat-checkbox [(ngModel)]='wirelessDevice' (change)="OnChange($event,'provider_id','awx',2)"
+                  class="service-sub-header">Cisco 5520 Series Wireless Controllers</mat-checkbox>
+                <mat-checkbox [(ngModel)]='unsupportedDevice' (change)="OnChange($event,'provider_id','awx',2)"
+                  class="service-sub-header">Unsupported Cisco Device</mat-checkbox>
+              </div>
+              <div style="text-align: right;">
+              <button class="text-button theme__button apply-btn clearBtn" (click)="clearFilter()">Clear Filter</button>
+              <button class="btn-bg text-button theme__button apply-btn mat-focus-indicator mat-raised-button mat-button-base mat-accent" (click)="applyFilter()">Apply Filter</button>
+            </div>
+
+            </mat-nav-list>
+          </div> -->
+    </div>
+
+</div>
